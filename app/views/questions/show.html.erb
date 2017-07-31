@@ -1,2 +1,12 @@
-<h1>Questions#show</h1>
-<p>Find me in app/views/questions/show.html.erb</p>
+<%= paginate @questions =%>
+<p>
+  <%= link_to 'New question', new_question_path %>
+  <br>
+  <strong>Title:</strong>
+  <%= @question.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @question.body %>
+</p>

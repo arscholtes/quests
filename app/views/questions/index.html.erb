@@ -1,2 +1,18 @@
-<h1>Questions#index</h1>
-<p>Find me in app/views/questions/index.html.erb</p>
+<%= paginate @questions =%>
+
+<h1>Listing questions</h1>
+<%= link_to 'New question', new_question_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+  <% @questions.each do |question| %>
+    <tr>
+      <td><%= question.title %></td>
+      <td><%= question.body %></td>
+      <td><%= link_to 'Show', question_path(question) %></td>
+    </tr>
+  <% end %>
+</table>

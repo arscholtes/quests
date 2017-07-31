@@ -10,9 +10,12 @@
 #                 PUT    /questions/:id(.:format)      questions#update
 #                 DELETE /questions/:id(.:format)      questions#destroy
 # questions_index GET    /questions/index(.:format)    questions#index
-# 
+#
 
 Rails.application.routes.draw do
+#  root to: 'sessions#new'
+#  resource :session, only: [:new, :create, :destroy]
+
   resources :questions
   get 'questions/index'
 
